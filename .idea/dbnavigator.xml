@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="ee9f63d3-168b-4d96-8232-1e76dc2e5534">
-      <console name="testdb" type="STANDARD" schema="public" session="Main"><![CDATA[create database testdb;]]></console>
+    <connection id="0f41ebaf-05b9-4b8d-a69b-8d1b8e7c57a1">
+      <console name="postgres@localhost" type="STANDARD" schema="postgres" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -25,11 +25,13 @@
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
-  <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__insert_default_user.sql" connection-id="ee9f63d3-168b-4d96-8232-1e76dc2e5534" session-id="MAIN" current-schema="postgres" />
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__db_init.sql" connection-id="ee9f63d3-168b-4d96-8232-1e76dc2e5534" session-id="MAIN" current-schema="public" />
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V3__user_update.sql" connection-id="ee9f63d3-168b-4d96-8232-1e76dc2e5534" session-id="MAIN" current-schema="postgres" />
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db_create.sql" connection-id="ee9f63d3-168b-4d96-8232-1e76dc2e5534" session-id="MAIN" current-schema="public" />
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -45,9 +47,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="ee9f63d3-168b-4d96-8232-1e76dc2e5534" active="true" signed="true">
+      <connection id="0f41ebaf-05b9-4b8d-a69b-8d1b8e7c57a1" active="true" signed="true">
         <database>
-          <name value="testdb" />
+          <name value="localhost" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
@@ -66,7 +68,7 @@
           <deprecated-pwd value="" />
         </database>
         <properties>
-          <auto-commit value="true" />
+          <auto-commit value="false" />
         </properties>
         <ssh-settings>
           <active value="false" />
