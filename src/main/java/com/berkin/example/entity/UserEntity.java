@@ -13,12 +13,11 @@ public class UserEntity implements Serializable {
 
     private Long id;
 
-
     private String username;
-
 
     private String firstname;
 
-
     private String lastname;
+
+    private String password;
 }

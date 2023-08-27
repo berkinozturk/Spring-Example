@@ -10,6 +10,7 @@ import org.springframework.util.ObjectUtils;
 
 import java.text.MessageFormat;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -22,6 +23,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserEntity create(UserEntity user) {
+
+        // random password
+        String dummyPassword = generateRandomPassword();
+        user.setPassword(dummyPassword);
+
         return getOne(repository.insert(user));
     }
 
@@ -47,5 +53,31 @@ public class UserServiceImpl implements UserService {
     public int deleteById(long id) {
         return repository.deleteById(id);
     }
+
+    private String generateRandomPassword() {
+        // generate random password
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder password = new StringBuilder();
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            int index = random.nextInt(characters.length());
+            password.append(characters.charAt(index));
+        }
+
+        return password.toString();
+    }
+
+    @Override
+    public UserEntity setPassword(UserEntity user, String password) {
+        // set password to new user
+        user.setPassword(password);
+
+        // update entity
+        repository.update(user);
+
+        return user;
+    }
+
 
 }

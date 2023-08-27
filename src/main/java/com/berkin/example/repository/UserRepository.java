@@ -28,7 +28,7 @@ public interface UserRepository {
     int deleteById(@Bind("id") long id);
 
     @Transaction
-    @SqlUpdate("update users set lastname = :lastname, firstname=:firstname where id = :id;")
+    @SqlUpdate("update users set lastname = :lastname, firstname=:firstname, password =: password where id = :id;")
     int update(@BindBean UserEntity user);
 
     @Transaction
