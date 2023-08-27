@@ -1,25 +1,24 @@
 package com.berkin.example.entity;
 
-import jakarta.persistence.*;
+
+import lombok.Data;
 
 import java.io.Serializable;
 
-import lombok.Data;
-@Entity
-@Table(name = "users")
+
 @Data
 public class UserEntity implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
     private Long id;
 
-    @Column(name = "userName")
-    private String userName;
 
-    @Column(name = "firstName")
-    private String firstName;
+    private String username;
 
-    @Column(name = "lastName")
-    private String lastName;
+
+    private String firstname;
+
+
+    private String lastname;
 }

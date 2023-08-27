@@ -4,9 +4,10 @@ services:
     image: "postgres"
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: users
     ports:
-      - 5432:5432
+      - 5455:5432
 volumes:
   database-data:

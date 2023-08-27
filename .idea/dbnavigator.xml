@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="0f41ebaf-05b9-4b8d-a69b-8d1b8e7c57a1">
-      <console name="postgres@localhost" type="STANDARD" schema="postgres" session="Main" />
+    <connection id="acb224a1-b07e-4afc-ba42-956499a62e20">
+      <console name="userslocal" type="STANDARD" schema="users" session="Main"><![CDATA[select * from "public".users;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -21,6 +21,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="acb224a1-b07e-4afc-ba42-956499a62e20" dataset="public.flyway_schema_history" active-filter-id="a5418d99-fc93-47b3-a83a-ee27eedd75a8">
+      <filter id="a5418d99-fc93-47b3-a83a-ee27eedd75a8" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="success" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -47,9 +54,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="0f41ebaf-05b9-4b8d-a69b-8d1b8e7c57a1" active="true" signed="true">
+      <connection id="acb224a1-b07e-4afc-ba42-956499a62e20" active="true" signed="true">
         <database>
-          <name value="localhost" />
+          <name value="userslocal" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
@@ -59,13 +66,13 @@
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
-          <port value="5432" />
-          <database value="postgres" />
+          <port value="5455" />
+          <database value="users" />
           <tns-folder value="" />
           <tns-profile value="" />
-          <type value="USER" />
-          <user value="postgres" />
-          <deprecated-pwd value="" />
+          <type value="USER_PASSWORD" />
+          <user value="root" />
+          <deprecated-pwd value="MTIzNA==" />
         </database>
         <properties>
           <auto-commit value="false" />
