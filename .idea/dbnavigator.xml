@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="acb224a1-b07e-4afc-ba42-956499a62e20">
-      <console name="userslocal" type="STANDARD" schema="users" session="Main"><![CDATA[select * from "public".users;]]></console>
+    <connection id="bf36f807-9220-4bb3-bd18-c0cca3f9e3df">
+      <console name="Connection" type="STANDARD" schema="postgres" session="Main"><![CDATA[select * from "public"]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -22,15 +22,14 @@
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="acb224a1-b07e-4afc-ba42-956499a62e20" dataset="public.flyway_schema_history" active-filter-id="a5418d99-fc93-47b3-a83a-ee27eedd75a8">
-      <filter id="a5418d99-fc93-47b3-a83a-ee27eedd75a8" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="success" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-  </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__insert_default_user.sql" connection-id="bf36f807-9220-4bb3-bd18-c0cca3f9e3df" session-id="MAIN" current-schema="public" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__db_init.sql" connection-id="bf36f807-9220-4bb3-bd18-c0cca3f9e3df" session-id="MAIN" current-schema="public" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V3__user_update.sql" connection-id="bf36f807-9220-4bb3-bd18-c0cca3f9e3df" session-id="MAIN" current-schema="public" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/db/migration/V4__add_password.sql" connection-id="bf36f807-9220-4bb3-bd18-c0cca3f9e3df" session-id="MAIN" current-schema="postgres" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -54,9 +53,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="acb224a1-b07e-4afc-ba42-956499a62e20" active="true" signed="true">
+      <connection id="bf36f807-9220-4bb3-bd18-c0cca3f9e3df" active="true" signed="true">
         <database>
-          <name value="userslocal" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
@@ -67,7 +66,7 @@
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="5455" />
-          <database value="users" />
+          <database value="postgres" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
