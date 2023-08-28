@@ -28,7 +28,12 @@ public class UserServiceImpl implements UserService {
         String dummyPassword = generateRandomPassword();
         user.setPassword(dummyPassword);
 
-        return getOne(repository.insert(user));
+        long userId = repository.insert(user); // Insert user
+        user.setId(userId);
+
+        repository.insertUserBalance(user); // Insert user balance
+
+        return getOne(userId);
     }
 
     @Override
@@ -77,6 +82,13 @@ public class UserServiceImpl implements UserService {
         repository.update(user);
 
         return user;
+    }
+
+    @Override
+    public UserEntity getUserInfo(long id) {
+        UserEntity user = getOne(id);
+
+        return user; // to be continued...
     }
 
 

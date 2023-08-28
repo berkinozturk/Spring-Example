@@ -16,4 +16,6 @@ public interface UserService {
     int deleteById(long id);
     UserEntity setPassword(UserEntity user, String password);
 
+    UserEntity getUserInfo(long id);
+
 }

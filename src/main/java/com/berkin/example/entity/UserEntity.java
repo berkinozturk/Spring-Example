@@ -20,4 +20,6 @@ public class UserEntity implements Serializable {
     private String lastname;
 
     private String password;
+
+    private Long balance;
 }

@@ -35,4 +35,8 @@ public interface UserRepository {
     @GetGeneratedKeys
     @SqlUpdate("insert into users (lastname, firstname) values (:lastname, :firstname);")
     int insert(@BindBean UserEntity user);
+
+    @Transaction
+    @SqlUpdate("INSERT INTO user_balance (user_id, balance) VALUES (:id, :balance);")
+    int insertUserBalance(@BindBean UserEntity user);
 }
